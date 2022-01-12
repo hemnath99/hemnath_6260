@@ -1,0 +1,38 @@
+
+//  Set //  TreeSet  //  Store string in Tree set //  Reverse  //  Print Tree set  //  Searching //
+
+package collection;
+import java.util.*;
+public class Tree1 {
+	public static void main(String[]args){
+	    TreeSet<String>list=new TreeSet<String>();
+		list.add("ram");
+		list.add("ram");
+		list.add("raja");
+		list.add("akshay");
+		list.add("sai");
+		list.add("Babu");
+	//	System.out.println(list.size());
+		
+		//  Reverse  //
+		System.out.println("\nReversed TreeSet");
+		TreeSet<String> list1 = (TreeSet<String>) list.descendingSet();
+		Iterator<String> itr=list1.iterator();
+		while(itr.hasNext()){
+			System.out.println(itr.next());
+		}
+		//  Iteration  //
+		System.out.println("\nOriginal TreeSet");
+		Iterator<String> itr1=list.iterator();
+		while(itr1.hasNext()){
+			System.out.println(itr1.next());
+		}
+		
+		// Searching //
+		System.out.println("\nSearching TreeSet");
+		System.out.println("List contains sai ? "+list.contains("sai"));
+	}
+}
+
+
+

@@ -1,0 +1,157 @@
+
+import javax.persistence.*;
+
+@Entity
+public class Student {
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private int s_id;
+	private String s_name;
+	
+	@ManyToMany(targetEntity=Library.class)
+	private List lib;
+	
+	
+	
+	public Student(int s_id, String s_name, List lib) {
+		super();
+		this.s_id = s_id;
+		this.s_name = s_name;
+		this.lib = lib;
+	}
+	
+	
+	
+	public Student() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
+
+	public List getLib() {
+		return lib;
+	}
+	public void ListLib(List lib) {
+		this.lib = lib;
+	}
+	public int getS_id() {
+		return s_id;
+	}
+	public void ListS_id(int s_id) {
+		this.s_id = s_id;
+	}
+	public String getS_name() {
+		return s_name;
+	}
+	public void ListS_name(String s_name) {
+		this.s_name = s_name;
+	}
+	}
+
+
+
+import java.util.List;
+
+import javax.persistence.*;
+
+@Entity
+public class Library {
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+private int b_id;
+private String b_name;
+
+@ManyToMany(targetEntity=Student.class)
+private List stud;
+
+
+
+
+public Library(int b_id, String b_name, List stud) {
+	super();
+	this.b_id = b_id;
+	this.b_name = b_name;
+	this.stud = stud;
+}
+
+public Library() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+
+public int getB_id() {
+	return b_id;
+}
+
+public void ListB_id(int b_id) {
+	this.b_id = b_id;
+}
+
+public String getB_name() {
+	return b_name;
+}
+
+public void ListB_name(String b_name) {
+	this.b_name = b_name;
+}
+
+public List getStud() {
+	return stud;
+}
+
+public void ListStud(List stud) {
+	this.stud = stud;
+}
+
+	
+}
+      
+ import java.util.ArrayList;
+
+
+import javax.persistence.*;
+import com.javatpoint.mapping.Student;
+import com.javatpoint.mapping.Library;
+
+
+public class ManyToManyExample {
+	
+	public static void main(String[] args) {
+		
+		EntityManagerFactory emf=Persistence.createEntityManagerFactory("books_issued");
+		EntityManager em=emf.createEntityManager();
+		
+		em.getTransaction().begin();
+		
+		Student st1=new Student(1,"Vipul",null);
+		Student st2=new Student(2,"Vimal",null);
+		
+		em.persist(st1);
+		em.persist(st2);
+		
+		
+		ArrayList&lt;Student&gt; al1=new ArrayList&lt;Student&gt;();
+	ArrayList&lt;Student&gt; al2=new ArrayList&lt;Student&gt;();
+		
+		al1.add(st1);
+		al1.add(st2);
+		
+		al2.add(st1);
+		al2.add(st2);
+		
+		Library lib1=new Library(101,"Data Structure",al1);
+		Library lib2=new Library(102,"DBMS",al2);
+		
+		
+		em.persist(lib1);
+		em.persist(lib2);
+		
+		em.getTransaction().commit();
+		em.close();
+		emf.close();
+		
+	}
+
+}

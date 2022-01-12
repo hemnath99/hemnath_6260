@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class Calculator {
+	public static void main(String[] args) {
+		Scanner obj=new Scanner(System.in);
+		System.out.println(" Enter First Number :");                 
+		int num1=obj.nextInt();
+		System.out.println("Enter Second Number :");
+		int num2=obj.nextInt();
+		System.out.println("Enter operation :");
+		char operation=obj.next().charAt(0);
+		switch (operation){
+		case'+': case'a': case'A':
+			int Result=num1+num2;
+		    System.out.println(+Result);
+		    break;
+		case'-': case's': case'S':
+			int Result2=num1-num2;
+		    System.out.println(+Result2);
+		    break;
+		case'*': case'm': case'M':
+			int Result3=num1*num2;
+		    System.out.println(+Result3);
+		    break;
+		case'/': case'd': case'D':
+			int Result4=num1/num2;
+		    System.out.println(+Result4);
+		    break;
+		case'%':  
+			int Result5=num1%num2;
+		    System.out.println(+Result5);
+		    break;
+		default:
+			System.out.println("Invalid");	
+		}
+	}
+}

@@ -1,0 +1,30 @@
+import java.util.Scanner; 
+	public class Vowels{
+		public static void main(String[]args){
+			Scanner sc=new Scanner(System.in);
+			System.out.println("enter the sentence:");
+			String sentence=sc.nextLine();
+			int vowels=0, consonants=0, spaces=0;
+			sentence=sentence.toLowerCase();
+			
+			for(int ctr=0; ctr<sentence.length(); ++ctr){
+				char ch=sentence.charAt(ctr);
+				
+				if(ch=='a'|| ch=='e'|| ch=='i'|| ch=='o'|| ch=='u'){
+					 vowels+=1;
+		//			System.out.println("vowels :" +vowels);  
+				     }
+				else if(ch>='a' && ch<='z'){
+					consonants+=1; 	 
+		//			System.out.println("consonants :"+consonants);  
+				          }
+				else if(ch==' '){
+					spaces+=1;	
+		//			System.out.println("spaces :"+spaces);  
+				    	     }
+				    }
+			System.out.println("there is " +vowels+"vowels in the sentence");
+			System.out.println("there is " +consonants+"consonants in the sentence");
+			System.out.println("there is " +spaces+"spaces in the sentence");
+				}
+			}

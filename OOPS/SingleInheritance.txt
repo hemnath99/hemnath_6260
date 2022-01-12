@@ -1,0 +1,54 @@
+class Test1
+{
+	public Test1(){
+		System.out.println("Sem1 Constructor");
+	}
+		int math, c, cpp;
+		public void input1(){
+			math=50;
+			c=60; 
+			cpp=70;	
+		}
+		public void output1(){
+			System.out.println("-------------------------------------");
+			System.out.println("Result of Sem-1");
+			System.out.println("Mark in Math    "+math);
+			System.out.println("Mark in C Lang "+c);
+			System.out.println("Mark in C++      "+cpp);
+			int Total =math+c+cpp;
+			System.out.println("-------------------------------------");
+			System.out.println("Total Mark in Sem-1: "+Total);
+			System.out.println("-------------------------------------\n");
+		}
+}
+class Test2 extends Test1{
+	int java,dbms,eng;
+	public Test2(){
+		System.out.println("Sem 2 constructor");
+	}
+	public void input2(){
+		java=55;
+		dbms=88;
+		eng=65;
+	}
+	public void output2(){
+		System.out.println("-------------------------------------");
+		System.out.println("Result of Sem-2 ");
+		System.out.println("Mark in Java "+java);
+		System.out.println("Mark in DBMS "+dbms);
+		System.out.println("Mark in English "+eng);
+		int Total =java+dbms+eng;
+		System.out.println("-------------------------------------");
+		System.out.println("Total Mark in Sem-2: "+Total);
+		System.out.println("-------------------------------------\n");
+		}
+}
+class SingleInheritance{
+	public static void main(String [] args){
+		Test2 obj=new Test2();
+		obj.input1();
+		obj.input2();
+		obj.output1();
+		obj.output2();
+	}
+}

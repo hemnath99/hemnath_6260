@@ -1,0 +1,12 @@
+//  PREDICATE USING LAMBDA //
+
+package java8;
+import java.util.function.Predicate;
+public class PrediLambda {
+
+	public static void main(String[] args) {
+		Predicate<String> strlength=str-> str.length()>5;    //  String predicate
+		System.out.println(strlength.test("Hello !"));
+	}
+
+}

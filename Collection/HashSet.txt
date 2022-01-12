@@ -1,0 +1,61 @@
+
+//  Set //  HashSet  //  Store and print employee names  //
+
+package collection;
+import java.util.*;
+import java.util.Iterator;
+public class Hashset1 {
+	public static void main(String[]args){
+	    Set<String> empName=new HashSet<String>();
+	    empName.add("ram");
+	    empName.add("ram");
+	    empName.add("raja");
+	    empName.add("akshay");
+	    empName.add("sai");
+	    empName.add("Babu");
+		//  System.out.println(empName.size());
+		//  Iteration  //
+		Iterator<String> itr=empName.iterator();
+		while(itr.hasNext()){
+			System.out.println(itr.next());
+		}
+}
+}
+
+//  Save Country Names  //  Search Country Name  //
+
+package collection;
+
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Scanner;
+import java.util.Set;
+
+public class HashSet2 {
+	public static void saveCountryNames(Set<String> countries){
+		//  Iteration  //
+			Iterator<String> itr=countries.iterator();
+			while(itr.hasNext()){
+				System.out.println(itr.next());
+			}
+	 }
+	public static void  getCountry(Set<String> countries){
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter CountryName :");
+		String Search=sc.nextLine();
+		String Result =(countries).contains(Search)?(Search):("Not Found"); 
+		System.out.println(Result);
+	}
+	public static void main(String[]args){
+		Set<String> Countries=new HashSet<String>();
+		Countries.add("India");
+		Countries.add("USA");
+		Countries.add("UK");
+		Countries.add("UAE");
+		Countries.add("Dubai");
+		Countries.add("France");
+//		System.out.println(Countries.size());
+        saveCountryNames(Countries);
+        getCountry(Countries);
+	}
+}

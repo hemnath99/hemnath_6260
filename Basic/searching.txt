@@ -1,0 +1,21 @@
+public class Searching {
+	public static void main(String[]args){
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the limit :");
+		int count=sc.nextInt();
+		int arr[]=new int[count];
+		for(int ctr=0; ctr<count; ctr++){                            
+				arr[ctr]=sc.nextInt();   }
+		System.out.println("Enter the number to find:");
+		int n=sc.nextInt();
+		for(int n1:arr){
+			if (n1== n){
+				System.out.println("true");
+				break; 
+				}
+			else{
+				System.out.println("false"); break;
+			}
+		}
+	}
+}

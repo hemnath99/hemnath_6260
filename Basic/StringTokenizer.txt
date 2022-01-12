@@ -1,0 +1,23 @@
+public class StrTokenizer {
+	public static void main(String [] args){
+		{
+		System.out.println("Using Constructor 1-");
+		StringTokenizer str1=new StringTokenizer("Hello How are you");
+		while(str1.hasMoreTokens());
+		{
+			System.out.println(str1.nextToken());
+		}}{
+		System.out.println("Using Constructor 2-");
+	    StringTokenizer str2=new StringTokenizer("JAVA : CODE: STRING",":");
+	    while(str2.hasMoreTokens()){
+	        	System.out.print(str2.nextToken());
+	        }}{
+	    System.out.println("\n");
+	    System.out.println("Using Constructor 3-");
+	    StringTokenizer str3=new StringTokenizer("JAVA : CODE: STRING",":",true);
+	    while(str3.hasMoreTokens()){
+	        	System.out.print(str3.nextToken());
+	        }}
+	}
+	}
+

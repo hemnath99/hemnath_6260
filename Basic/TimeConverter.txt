@@ -1,0 +1,70 @@
+
+class Hours{
+	public void hrs(){
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the time in hours : ");
+	    int time=sc.nextInt();
+	    int min=time*60;
+	    int sec=min*60;
+	    System.out.println("Minutes for "+time+" Hour is : "+min);
+	    System.out.println("Seconds for "+time+" Hour is : "+sec);
+	}	
+}
+class Minutes{
+	public void min(){
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the time in minutes : ");
+	    int time=sc.nextInt();
+	    if(time%60!=0){
+	    	float hr=time/60;
+		    int min=time-60;
+		    int sec=time*60;
+	    System.out.println("Hours for "+time+" Minutes is : "+hr);
+	    System.out.println("Minutes for "+time+" Minutes is : "+min);
+	    System.out.println("Seconds for "+time+" Hour is : "+sec);
+	}	
+	    else{
+	    	float hr=time/60;
+		    int sec=time*60;
+		    System.out.println("Hours for "+time+" Minutes is : "+hr);
+		    System.out.println("Seconds for "+time+" Hour is : "+sec);
+	    	}
+	}
+}
+class Seconds{
+	public void sec(){
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the time in seconds : ");
+	    int time=sc.nextInt();
+	    int min=time/60;
+	    float hr=min/60;
+	    System.out.println("Hours for "+time+" Seconds is : "+hr);
+	    System.out.println("Minutes for "+time+" Seconds is : "+min);
+}
+}
+public class TimeConversion {	
+	public  static void main (String[]args){
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Select the Option ");
+		System.out.println("1. From Hours");
+		System.out.println("2. From Minutes");
+		System.out.println("3. From Seconds");
+		int n=sc.nextInt();
+		switch(n){
+		case 1:
+			Hours a=new Hours();
+			a.hrs();
+		case 2:
+			Minutes b=new Minutes();
+			b.min();
+		case 3:
+			Seconds c=new Seconds();
+			c.sec();
+			break;
+		default :
+		    System.out.println("Invalid !");
+		}
+	}
+}
+
+

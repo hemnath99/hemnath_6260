@@ -1,0 +1,11 @@
+import java.util.*;
+public class String {
+	public static void main(String []args){
+		java.lang.String s1="Sachin";
+		java.lang.String s2="Sachin";
+		java.lang.String s3="Saurav";
+		System.out.println(s1.equals(s2));
+		System.out.println(s1.equals(s3));
+		System.out.println(s1.equals(s3));
+	}
+}

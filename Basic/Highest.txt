@@ -1,0 +1,18 @@
+import java.util.*;
+public class SecondHighest {
+	public static void main(String[]args){
+				Scanner sc=new Scanner(System.in);
+				System.out.println("Enter the limit :");
+				int count=sc.nextInt();
+				int arr[]=new int[count];
+				for(int ctr=0; ctr<count; ctr++){                            
+						arr[ctr]=sc.nextInt();   }
+				Arrays.sort(arr);
+				System.out.println("sorted order:");
+				for(int ctr=0; ctr<count; ctr++){
+					System.out.println(arr[ctr]);
+				}
+		//		System.out.println("First Highest value is :"+arr[count-1]);
+				System.out.println("Second Highest value is:"+arr[count-2]);
+			}
+}

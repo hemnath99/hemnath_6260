@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class Palindrome {
+	public static void main(String args[]){
+		// with reverse();
+		StringBuffer name=new StringBuffer("hemnath");
+		name.reverse();                      // reverse()
+		System.out.println(name);     // reverse string
+	//	System.out.println((name.equals(name.reverse())? ("Palindrome") : ("Not palindrome")));	
+	/*
+		//without reverse();
+		Scanner obj=new Scanner(System.in);
+        System.out.println("Enter the sentence:");
+        String sentence=obj.nextLine();
+        char chArray[]=sentence.toCharArray();                 // string to char conversion
+        int counter=chArray.length-1;                                  
+        String reversedString="";
+        while(counter>=0){
+         //	System.out.println(chArray[counter--]);              // print line by line
+        	reversedString+=chArray[counter--];     }            // print in 1 line      
+        System.out.println(reversedString);
+    	System.out.println(sentence.equals(reversedString)? ("Palindrome") : ("Not palindrome"));
+    	
+    	// Another Method 1   Method 2 - using if-else statement
+    	Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the word:");
+        String word=sc.nextLine();
+        char chArray1[]=sentence.toCharArray();                 // string to char conversion
+        int value=chArray.length-1;     
+        for(int ctr1=0; ctr1<value/2; ctr1++) {
+        System.out.println((chArray1[ctr1]==chArray1[ctr1--])?("Palindrome"):("Not Palindrome")); break;*/
+        }   }  //} 

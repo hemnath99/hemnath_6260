@@ -1,0 +1,22 @@
+import java.util.*;
+public class Splitwords {
+	public static void main(String args[]) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the sentence: ");
+		String sentence=sc.nextLine();
+		// without String() //
+		for(int ctr=0; ctr<sentence.length(); ctr++){
+			char ch=sentence.charAt(ctr);                        // how are you  
+			System.out.print(ch);
+			if(ch==' ')      {
+				System.out.println();           }
+				else {
+					continue;
+				} }
+		// with String() //
+     StringTokenizer sentence1=new StringTokenizer(sentence," ");
+     while(sentence1.hasMoreTokens()){
+    	 System.out.println(sentence1.nextToken()); } 
+ 
+	}
+}

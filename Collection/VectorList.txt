@@ -1,0 +1,56 @@
+//  Store Employee Details in Vector  //  Search using Id  //  
+
+package collection;
+
+import java.util.Iterator;
+import java.util.Scanner;
+import java.util.Vector;
+class Employees{
+	public int Id; String Name; String Address;  int Salary;
+	public Employees(int Id, String Name, String Address, int Salary){
+		super();
+		this.Id=Id;
+		this.Name=Name;
+		this.Address=Address;
+		this.Salary=Salary;
+	}
+	public int getId(){
+		return Id;
+	}
+	public String toString(){
+		System.out.println( "Employee Id="+Id+", Name="+Name+", Address="+Address+", Salary="+ Salary);
+		return "";
+		}		
+	}
+public class Vector1 {
+
+	public static void main(String[] args) {
+		Vector<Employees> emp=new Vector<Employees>();
+		emp.add(new Employees(111,"Ram","TN",20000));
+		emp.add(new Employees(112,"Raja","AP",30000));
+		emp.add(new Employees(113,"Akshay","KL",10000));
+		emp.add(new Employees(114,"Sai","KA",25000));
+		emp.add(new Employees(115,"Babu","UP",40000));
+		System.out.println(emp);
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Id :");
+		int SId=sc.nextInt();
+		
+		Iterator<Employees> itr=emp.iterator();
+		while(itr.hasNext()){
+			Employees Emp1=itr.next();
+			
+		if(Emp1.getId()==SId)
+		{
+			System.out.println(Emp1);
+			break;
+		}
+		else
+		{
+			System.out.println("No Record Found");
+			break;
+		}
+		}
+	}
+}

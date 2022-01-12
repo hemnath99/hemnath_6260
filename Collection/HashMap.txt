@@ -1,0 +1,88 @@
+//  Store String in Map //  Print elements  // 
+
+package collection;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+public class Hashmap1 {
+
+	public static void main(String[] args) {
+		Map<String,String> hs = new HashMap<String,String>();
+		hs.put("a","David");
+		hs.put("b","Ravi");
+		hs.put("c","Amit");
+		hs.put("d","Ram");
+		hs.put("e","david");
+		System.out.println(hs);
+		//  Map to Set  //
+		Set<Entry<String, String>> s=hs.entrySet();
+		//  Iterator  //
+		Iterator itr = s.iterator();
+		while(itr.hasNext())
+		{
+			Map.Entry me =(Map.Entry)itr.next();
+			System.out.println(me.getKey()+"  "+me.getValue());
+		}
+		}
+}
+
+
+//  Store Employee name and Phone Number in HashMap  // 
+
+package collection;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
+public class HashMap2 {
+
+	public static void main(String[] args) {
+		Map<String,Integer> emp = new HashMap<String,Integer>();
+		emp.put("Ram",987654320);
+		emp.put("Raja",897654310);
+		emp.put("Akshay",789054321);
+		emp.put("Sai",809765421);
+		emp.put("Babu",620000190);
+		Set s =emp.entrySet();
+		Iterator itr = s.iterator();
+		while(itr.hasNext())
+		{
+			Map.Entry me =(Map.Entry)itr.next();
+			System.out.println("Employee Name : "+me.getKey()+" , PhoneNumber : "+me.getValue());
+		}
+	}
+}
+
+//  Store Employee name and Phone Number in HashMap  // 
+
+package collection;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
+public class HashMap2 {
+
+	public static void main(String[] args) {
+		Map<String,Integer> emp = new HashMap<String,Integer>();
+		emp.put("Ram",987654320);
+		emp.put("Raja",897654310);
+		emp.put("Akshay",789054321);
+		emp.put("Sai",809765421);
+		emp.put("Babu",620000190);
+		Set s =emp.entrySet();
+		Iterator itr = s.iterator();
+		while(itr.hasNext())
+		{
+			Map.Entry me =(Map.Entry)itr.next();
+			System.out.println("Employee Name : "+me.getKey()+" , PhoneNumber : "+me.getValue());
+		}
+	}
+}

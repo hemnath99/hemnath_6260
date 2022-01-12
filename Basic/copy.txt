@@ -1,0 +1,19 @@
+public class Copy {
+	public static void main(String[]args){
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the limit :");
+		int count=sc.nextInt();
+		int arr[]=new int[count];
+		for(int ctr=0; ctr<count; ctr++){                            
+				arr[ctr]=sc.nextInt();   }
+		int carr[]=arr.clone();
+		System.out.println("Elements in array:");
+		for(int ctr=0; ctr<arr.length; ctr++){
+			System.out.print(arr[ctr]+" ");
+		}
+		System.out.println("\nElements in copied array:");
+		for(int ctr1=0; ctr1<carr.length; ctr1++){
+			System.out.print(arr[ctr1]+" ");
+		}
+	}
+}

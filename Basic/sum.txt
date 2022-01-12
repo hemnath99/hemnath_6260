@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Array {
+	public static void main(String [] args){
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter the Limit : ");
+		int count=sc.nextInt();
+		int arr[]=new int[count];
+	    int sum =0;
+	    int ctr=0;
+		for(; ctr<count; ctr++){                            
+				arr[ctr]=sc.nextInt();   
+	            sum += arr[ctr];
+		}
+		System.out.println("----------------------------------------\n");
+		System.out.println("Total Element   :"+arr.length);       
+		System.out.println("Sum of Elements : "+ sum);
+	    System.out.println("Average of Elements : "+sum/count); 
+	 }	
+}

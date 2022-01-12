@@ -1,0 +1,19 @@
+public class Reverse {
+	public static void main(String[]args){
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the limit :");
+		int count=sc.nextInt();
+		int arr[]=new int[count];
+		for(int ctr=0; ctr<count; ctr++){                            
+				arr[ctr]=sc.nextInt();   }
+		System.out.println("Elements in array:");
+		for(int ctr=0; ctr<count; ctr++){
+			System.out.println(arr[ctr]+"");
+		}
+		System.out.println("Reversed Elements:");	
+		for (int ctr=count-1; ctr>=0; ctr--){
+			System.out.println(arr[ctr]+"");
+		}
+	}
+
+}

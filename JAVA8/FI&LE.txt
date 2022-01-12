@@ -1,0 +1,21 @@
+//   FUNCTIONAL INTERFACE  //  LAMBDA EXPRESSION  //  ANNONYMOUS CLASS //
+
+package java8;
+@FunctionalInterface
+interface Engine{
+	abstract public void speed();
+	
+}
+public class Demo {                    // Implements Engine
+	public static void main(String[]args){
+		// Lamda Expression
+//		Engine obj=( )->System.out.println("This is speed method");{
+//		obj.speed();
+		
+        // Annonymous Class
+        	Engine obj=new Engine(){
+         	public void speed(){
+    		System.out.println("This is speed Method from annonymous Class"); 
+         	} 
+         	}; obj.speed();
+}}

@@ -1,0 +1,11 @@
+import java.util.function.Function;
+
+public class FunctionFI {
+	public static void main(String[]args){
+		Function<Integer,Integer> Int=t->t*10;
+		System.out.println(Int.apply(2));
+		
+		Function<Integer,String> IntString=t->t*10+"Multiplied by 10";
+		System.out.println(IntString.apply(2));
+	}
+}

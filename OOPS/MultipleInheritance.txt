@@ -1,0 +1,37 @@
+interface Engine1{
+	final int cost=20;
+	abstract public void show();
+	public void display();
+}
+interface Engine2{
+	final int cost=30;
+	abstract public void show();
+	public void work();
+}
+class Car{
+	public void speed(){
+		System.out.println("The average speed of the car is good");
+	}
+}
+
+class Vehicle extends Car implements Engine1,Engine2{
+	public void work(){
+		System.out.println("Cost of Engine1:"+Engine1.cost);
+		System.out.println("Cost of Engine2:"+Engine2.cost);
+	}
+	public void show(){
+		System.out.println("This is show method");
+		
+	}
+	public void display(){
+		System.out.println("This is display method ");
+	}
+}
+class MultipleInheritance{
+	public static void main(String[]args){
+		Vehicle obj=new Vehicle();
+		obj.display();
+		obj.show();
+		obj.work();
+	}
+}

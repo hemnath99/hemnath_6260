@@ -1,0 +1,31 @@
+public class StrJoiner {
+	public static void main(String [] args){
+		StringJoiner Names=new StringJoiner(",\n");   // passing (,) as delim //
+		// add values to StringJoiner //
+		Names.add("Raghul");
+		Names.add("Raju");
+		Names.add("Peter");
+		Names.add("Raheem");
+		System.out.println(Names);
+		 System.out.println("");
+		// passing comma(,) and square-brackets as delimiter
+		StringJoiner Name=new StringJoiner(",","[","]");
+		Name.add("Raghul");
+		Name.add("Raju");
+		Name.add("Peter");
+		Name.add("Raheem");
+	    System.out.println(Name);
+	    System.out.println("");
+	 // Creating StringJoiner with :(colon) delimiter
+		StringJoiner name=new StringJoiner(" :","[","]");
+		name.add("Raghul");
+		name.add("Raju");
+		name.add("Peter");
+		name.add("Raheem");
+	    System.out.println(name);
+	    System.out.println("");
+	 // Merging two StringJoiner
+	    StringJoiner merge=Names.merge(name);
+	    System.out.println(merge);
+	}
+}

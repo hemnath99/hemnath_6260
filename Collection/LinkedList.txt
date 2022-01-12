@@ -1,0 +1,47 @@
+//  To store Even Numbers  //  PrintEvenNumbers  //  Searching Numbers  // Using LinkedList  //
+
+package collection;
+import java.util.*;
+
+public class LinkedList1 {
+	public static LinkedList<Integer> A1=new LinkedList<Integer>(); 
+	
+	public LinkedList<Integer> saveEvenNumbers(int N){
+		A1=new LinkedList<Integer>();
+		for(int ctr=2; ctr<=N; ctr++){
+			if(ctr%2==0){
+			    A1.add(ctr);
+			}
+		}
+		System.out.println("Even Numbers  : "+ A1);
+		return A1;	
+}
+	public  LinkedList <Integer> printEvenNumbers(){
+		LinkedList <Integer> A2=new LinkedList<Integer>();
+		for(int pn:A1){
+			A2.add(pn*2);
+			}
+		System.out.println("Multiply with 2  : " +A2);
+		return A2;
+		}
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the Number:  ");
+		int value=sc.nextInt();
+		LinkedList1 l=new LinkedList1();
+		l.saveEvenNumbers(value);
+		l.printEvenNumbers();
+		System.out.println("Enter the Number to Search :  ");
+//		System.out.println(A1.contains(new Integer(2)));
+		int val=sc.nextInt();
+		int s=(A1.contains(val)?(val):(0)); System.out.println(s);
+//		 boolean s=A1.contains(val);
+//		if(s){
+//			System.out.println(val);
+//		}
+//		else{
+//	        System.out.println("0");
+//	        }
+	}
+}   

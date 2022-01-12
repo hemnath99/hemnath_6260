@@ -1,0 +1,30 @@
+// Predicate  And, Or, Negate //
+
+package java8;
+import java.util.function.Predicate;
+public class PredicateAndOrNegate {
+	public static void main(String[]args){
+		Predicate<Integer> greater=(x)->x>10;
+		boolean ans=greater.test(25);
+		System.out.println(ans);
+		
+		Predicate<Integer> lesser=(y)->y<2;
+		boolean ans2=lesser.test(25);
+		System.out.println(ans2);
+		//  and  //
+		boolean ans3=greater.and(lesser).test(15);
+		System.out.println(ans3);
+		// or  //
+		boolean ans4=greater.or(lesser).test(15);
+		System.out.println(ans4);
+		//  negate  //
+		boolean ans5=greater.or(lesser).negate().test(5);
+		boolean ans6=greater.and(lesser).negate().test(5);
+		System.out.println("Negate Or result " + ans5);
+		System.out.println("Negate And result " + ans6);
+		
+		// Predicate with String  //
+		Predicate<String> strlength=str-> str.length()>5;    //  String predicate
+		System.out.println(strlength.test("Hello !"));
+	}
+}

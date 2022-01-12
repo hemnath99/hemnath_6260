@@ -1,0 +1,19 @@
+import java.util.Scanner;   //import java.util.*;
+public class Assignment1{
+	public static void main (String args[]){
+		Scanner sc=new Scanner(System.in);
+		System.out.println(" Enter Upper limit :");              // Get value
+		// int count=sc.nextInt();
+		byte count;                                                                // Read value
+		count=sc.nextByte();
+		int arr[]=new int[count];                                         // Assign values to array
+		String Result,Result1;
+		for(int ctr=0; ctr<count; ctr++){                              // loop execute until value < upper limit
+			arr[ctr]=sc.nextInt();                                         // Store values to array
+			if(arr[ctr]>=0){                                                    // Executes if value > 0  // Check +ve value %7 =0 or not    
+				Result=((arr[ctr]%7==0)?("positve number and divisible by 7"):("positive number and not divisible by 7")); System.out.println(arr[ctr]+" "+Result);  }
+			else{                                                                  // Executes if value <0  // Check -ve value %7=0 or not
+				Result1=((arr[ctr]%7==0)?("negative number and divisible by 7"):("negative number and not divisible by 7")); System.out.println(arr[ctr]+" "+Result1); }
+		}
+		}
+}

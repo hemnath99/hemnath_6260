@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class ReverseString {
+	public static void main(String args[]){
+		// with reverse();
+		StringBuffer name=new StringBuffer("hemnath");
+		name.reverse();
+		System.out.println(name); 
+	
+		//without reverse();
+		Scanner obj=new Scanner(System.in);
+        System.out.println("Enter the sentence:");
+        String sentence=obj.nextLine();
+        char chArray[]=sentence.toCharArray();                 // string to char conversion
+        int counter=chArray.length-1;                                  
+        String reversedString="";
+        while(counter>=0){
+        //	System.out.println(chArray[counter--]);              // print line by line
+        	reversedString+=chArray[counter--];                 // print in 1 line
+        }
+        System.out.println(reversedString);
+	    }   	
+    }

@@ -1,0 +1,81 @@
+class Sem1
+{
+	public Sem1(){
+		System.out.println("Sem1 Constructor");
+	}
+		int math, c, cpp;
+		public void input1(){
+			math=50;
+			c=60; 
+			cpp=70;	
+		}
+		public void output1(){
+			System.out.println("-------------------------------------");
+			System.out.println("Result of Sem-1");
+			System.out.println("Mark in Math    "+math);
+			System.out.println("Mark in C Lang "+c);
+			System.out.println("Mark in C++      "+cpp);
+			int Total =math+c+cpp;
+			System.out.println("-------------------------------------");
+			System.out.println("Total Mark in Sem-1: "+Total);
+			System.out.println("-------------------------------------\n");
+		}
+}
+class Sem2 extends Sem1{
+	int java,dbms,eng;
+	public Sem2(){
+		System.out.println("Sem 2 constructor");
+	}
+	public void input2(){
+		java=55;
+		dbms=88;
+		eng=65;
+	}
+	public void output2(){
+		System.out.println("-------------------------------------");
+		System.out.println("Result of Sem-2 ");
+		System.out.println("Mark in Java "+java);
+		System.out.println("Mark in DBMS "+dbms);
+		System.out.println("Mark in English "+eng);
+		int Total =java+dbms+eng;
+		System.out.println("-------------------------------------");
+		System.out.println("Total Mark in Sem-2: "+Total);
+		System.out.println("-------------------------------------\n");
+		}
+}
+class Sem3 extends Sem2
+{
+	int mis, dm, android;
+	public Sem3(){
+		System.out.println("Sem 3 Constructor");
+	}
+	public void input3() // Member functions
+	{
+		mis =65;
+		dm=88;
+		android=65;
+		}
+	public void output3()
+	{
+	System.out.println("-------------------------------------");
+	System.out.println("Result of Semester-3 ");
+	System.out.println("Marks in MIS "+mis);
+	System.out.println("Marks in DM "+dm);
+	System.out.println("Marks in Android "+android);
+	int Total =mis+dm+android;
+	System.out.println("-------------------------------------");
+	System.out.println("Total Mark in Sem-3: "+Total);
+	System.out.println("-------------------------------------\n");
+	}
+}
+class MultilevelInheritance{
+	public static void main(String [] args){
+		Sem3 obj=new Sem3();
+		obj.input1();
+		obj.input2();
+		obj.input3();
+		obj.output1();
+		obj.output2();
+		obj.output3();
+	}
+}

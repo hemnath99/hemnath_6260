@@ -1,0 +1,20 @@
+// get input using string buffer  //
+
+import java.io.*;
+import java.lang.String;
+public class InputStringBuffer {
+	public static void main(String [] args) throws IOException{
+		InputStreamReader isr=new InputStreamReader(System.in);
+        System.out.println("Enter the number:");	
+		BufferedReader br=new BufferedReader(isr);
+		String str=br.readLine();
+		
+        System.out.println("Enter the number:");	
+		BufferedReader br1=new BufferedReader(new InputStreamReader(System.in));
+		String str1=br1.readLine();
+	
+		int num1=Integer.parseInt(str);
+		System.out.println(str+str1);
+		System.out.println(num1);
+	}
+}

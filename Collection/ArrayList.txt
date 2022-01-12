@@ -1,0 +1,128 @@
+
+//  Store only Strings  //  By creating printAll() method with Iterator  //
+
+package collection;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class ArrayListString {
+	 public static void printAll(List<String> list){
+			//  Iteration  //
+			Iterator<String> itr=list.iterator();
+			while(itr.hasNext()){
+				System.out.println(itr.next());
+			}
+}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList<String> list=new ArrayList<String>();
+		list.add("ram");
+		list.add("raja");
+		list.add("akshay");
+		list.add("sai");
+		list.add("Babu");
+		printAll(list);
+		}
+	   
+}
+
+//  Store Employee Details in ArrayList  //  Search using Id  //
+
+package collection;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Scanner;
+class Employee{
+	public int Id; String Name; String Address;  int Salary;
+	public Employee(int Id, String Name, String Address, int Salary){
+		super();
+		this.Id=Id;
+		this.Name=Name;
+		this.Address=Address;
+		this.Salary=Salary;
+	}
+	public int getId(){
+		return Id;
+	}
+	public String toString(){
+		System.out.println( "Employee Id="+Id+", Name="+Name+", Address="+Address+", Salary="+ Salary);
+		return "";
+		}		
+	}
+public class ArrayList2 {
+
+	public static void main(String[] args) {
+		ArrayList<Employee> emp=new ArrayList<Employee>();
+		emp.add(new Employee(111,"Ram","TN",20000));
+		emp.add(new Employee(222,"Raja","AP",30000));
+		emp.add(new Employee(311,"Akshay","KL",10000));
+		emp.add(new Employee(411,"Sai","KA",25000));
+		emp.add(new Employee(511,"Babu","UP",40000));
+		System.out.println(emp);
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Id :");
+		int SId=sc.nextInt();
+		
+		Iterator<Employee> itr=emp.iterator();
+		while(itr.hasNext()){
+			Employee Emp=itr.next();
+			
+		if(Emp.getId()==SId)
+		{
+			System.out.println(Emp);
+			break;
+		}
+		}
+	}
+}
+
+//  To store Even Numbers  //  PrintEvenNumbers  //  Searching Numbers  //
+
+package collection;
+import java.util.*;
+
+public class ArrayList1 {
+	public static ArrayList<Integer> A1=new ArrayList<Integer>(); 
+	
+	public ArrayList<Integer> saveEvenNumbers(int N){
+		A1=new ArrayList<Integer>();
+		for(int ctr=2; ctr<=N; ctr++){
+			if(ctr%2==0){
+			    A1.add(ctr);
+			}
+		}
+		System.out.println("Even Numbers  : "+ A1);
+		return A1;	
+}
+	public  ArrayList<Integer> printEvenNumbers(){
+		ArrayList<Integer> A2=new ArrayList<Integer>();
+		for(int pn:A1){
+			A2.add(pn*2);
+			}
+		System.out.println("Multiply with 2  : " +A2);
+		return A2;
+		}
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the Number:  ");
+		int value=sc.nextInt();
+		ArrayList1 al=new ArrayList1();
+		al.saveEvenNumbers(value);
+		al.printEvenNumbers();
+		//al.Search();
+		System.out.println("Enter the Number to Search :  ");
+		int val=sc.nextInt();
+		boolean s=A1.contains(val);
+		if(s){
+			System.out.println(val);
+		}
+		else{
+	        System.out.println("0");
+	        }
+	}
+}   

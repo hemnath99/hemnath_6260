@@ -1,0 +1,55 @@
+import java.util.Scanner;
+public class Calendar{
+	public static void main(String[]args){
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the month:");
+		String month=sc.nextLine();
+		month=month.toLowerCase();
+		int totalDays=0;
+		switch(month){
+		case "janauary": case "01": case "1": 
+			totalDays+=31;
+			System.out.println("Janauary   : 31 days");
+		case "february": case "02": case"2":
+			totalDays+=28;
+			System.out.println("February   : 28 days");
+		case "march": case"03": case"3":
+			totalDays+=31;
+			System.out.println("March       : 31 days");
+		case "april": case"04": case"4":
+			totalDays+=30;
+			System.out.println("April         : 30 days");
+		case "may": case"05": case"5":
+			totalDays+=30;
+			System.out.println("May          : 30 days");
+		case "june": case"06": case"6":
+			totalDays+=30;
+			System.out.println("June          : 30 days");
+		case "july": case"07": case"7":
+			totalDays+=31;
+			System.out.println("July           : 31 days");
+		case "august": case"08": case"8":
+			totalDays+=31;
+			System.out.println("August      : 31 days");
+		case "september": case"09": case"9":
+			totalDays+=30;
+			System.out.println("September : 30 days");
+		case "octomber": case"10":
+			totalDays+=31;
+			System.out.println("Octomber  : 31 days");
+		case "november": case"11":
+			totalDays+=30;
+			System.out.println("November : 30 days");
+		case "december": case"12":
+			totalDays+=31;
+			System.out.println("December : 31 days");
+			System.out.println("-------------------------------");
+			System.out.println("Remaining days :"+" "+totalDays);
+		default:
+			System.out.println("-------------------------------");
+			System.out.println("End of the year");
+			
+		}
+
+	}
+}

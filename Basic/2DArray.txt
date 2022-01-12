@@ -1,0 +1,40 @@
+import java.util.Scanner;
+public class Array{
+	public static void function(int[][] arr){                        // function call() //
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the value :");
+		int val=sc.nextInt();      
+		System.out.println("Increment value :");
+		int value=sc.nextInt();   
+		int row=0;
+		while(row<arr.length){                   
+			int col=0;
+			while (col<arr[0].length){
+				arr[row][col]=val;
+			    val+=value;                                                     // compound assignment //
+				col++;
+			}
+			row++;
+		}
+		int ctr=0;
+		while(ctr<arr.length){
+			int ctr1=0;
+			while(ctr1<arr[0].length){
+				System.out.print(arr[ctr][ctr1]+" ");
+				ctr1++;
+			}
+			ctr++;
+			System.out.println();  
+		}
+	}
+		public static void main(String[]args) {
+			Scanner sc=new Scanner(System.in);
+			System.out.println("Enter no.of. rows :");
+			int rows=sc.nextInt();
+			System.out.println("Enter no.of. columns :");	
+			int columns=sc.nextInt();
+			int arr[][]=new int[rows][columns];                         // arr.length = row // arr[0].length = column //
+			function(arr);                                                            // function call() //
+			
+	}
+}

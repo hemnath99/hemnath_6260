@@ -1,0 +1,14 @@
+
+import java.util.function.Supplier;
+
+public class SupplierFI implements Supplier<Integer>{
+		public Integer get(){
+			System.out.println("Dummy");
+			return null;
+		}
+		
+	 public static void main(String[] args){
+		 Supplier<Integer> obj=new SupplierFI();
+		 obj.get();
+	 }
+}
