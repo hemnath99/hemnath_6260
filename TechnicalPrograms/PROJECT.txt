@@ -1,0 +1,64 @@
+//  Simple and Compound Interest //
+
+import java.util.Scanner;
+
+public class Simple_CompoundInterest {
+	public static void  SI(){
+		Scanner sc=new Scanner(System.in);
+		  System.out.println("\n--------------------------------------------");
+		  System.out.println("          SIMPLE INTEREST " );
+		  System.out.println("--------------------------------------------");
+		  System.out.print("Enter Principle Amount : ");           int P=sc.nextInt();
+		  System.out.print("Enter Rate of Interest    : ");           int R=sc.nextInt();
+		  System.out.print("Enter No. of. Years         : ");          int T=sc.nextInt();
+		  int SI=(P*R*T)/100;
+		  int sum=P+SI;
+		  System.out.println("                                         ----------");
+		  System.out.println("      Total Interest            : "+SI);
+		  System.out.println("\n      Final Amount            : "+sum);
+		  System.out.println("                                         ----------");
+   
+	}
+	public static void CI() {
+		Scanner sc=new Scanner(System.in);
+		  System.out.println("\n--------------------------------------------");
+		  System.out.println("        COMPOUND INTEREST " );
+		  System.out.println("--------------------------------------------");
+		  System.out.print("Enter Principle Amount : ");           int P=sc.nextInt();
+		  System.out.print("Enter Rate of Interest    : ");           int R=sc.nextInt();
+		  System.out.print("Enter No. of. Years         : ");          int T=sc.nextInt();
+		  int CI=(1+R/100)^T;
+		  int I=P*CI;
+	      int  sum=I-P;
+		  System.out.println("                                         ----------");
+		  System.out.println("      Total Interest            : "+I);
+		  System.out.println("\n      Final Amount            : "+sum);
+		  System.out.println("                                         ----------");
+ 
+	}
+	public static void main(String [] args) {
+		Scanner sc=new Scanner(System.in);
+		int n;
+		do {
+		System.out.println("Press 1: To find Simple Interest");
+		System.out.println("Press 2: To find Compound Interest");
+		System.out.println("Press 0:  Stop");
+		System.out.println("Enter Your Choice : ");
+		n=sc.nextInt();
+
+		switch(n) {
+		case 0 :
+			System.out.println("Exited !");
+			break;
+		case 1 :
+			SI();
+			break;
+		case 2 :
+			CI();
+			break;
+	    default :
+	    	System.out.println("Invalid ! \n Enter correct option ");
+		}
+	}while(n!=0);
+	}
+}

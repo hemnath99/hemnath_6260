@@ -1,0 +1,180 @@
+class SBAccount{
+	public void calculateInterest(){
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the Average amount in your account:");
+		double amount=sc.nextDouble();
+		if(amount>=0){
+		double interestRate1=amount*4/100;
+		double interestRate2=amount*6/100;
+		System.out.println("Interest gained for Normal : "+interestRate1);
+		System.out.println("Interest gained for NRI : "+interestRate2);
+    	}
+		else{
+			System.out.println("Invalid amount. Please enter correct values.");
+		}
+}
+}
+class FDAccount{
+	public void calculateInterest(){
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the Average amount in your account:");
+		double amount=sc.nextDouble();
+		System.out.println("Enter the number of days :");
+		int noOfDays=sc.nextInt();
+		System.out.println("Enter your age :");
+		int age=sc.nextInt();
+		if(amount<0){
+			System.out.println("Invalid amount. Please enter correct values.");
+		}
+		if(noOfDays<7){
+			System.out.println("Invalid Number of days. Please enter correct values.");
+		}
+		if(age<18){
+			System.out.println("Invalid age. Please enter correct values.");
+		}
+		int d=noOfDays;
+		int a=age;
+		double interestRate = 0;
+		if(amount>=0 && amount<10000000){                                                              
+			if(a>=18 && a<60)                                                                        
+			{
+				if(d>=7 && d<=14){
+					interestRate=amount*4.50/100;
+					System.out.println("Interest gained : "+interestRate);}
+				if(d>=15 && d<=29){
+					interestRate=amount*4.75/100;
+					System.out.println("Interest gained : "+interestRate);}
+				if(d>=30 && d<=45){
+					interestRate=amount*5.50/100;
+					System.out.println("Interest gained : "+interestRate);}
+				if(d>=45 && d<=60){
+					interestRate=amount*7/100; 
+					System.out.println("Interest gained : "+interestRate);}
+				if(d>=61 && d<=184){
+					interestRate=amount*7.50/100; 
+					System.out.println("Interest gained : "+interestRate);}
+				if(d>=185 && d<=365){
+					interestRate=amount*8.00/100; 
+					System.out.println("Interest gained : "+interestRate);}
+			}
+		if(a>=60){
+			if(d>=7 && d<=14){
+				interestRate=amount*5.00/100; 
+				System.out.println("Interest gained : "+interestRate);}
+			if(d>=15 && d<=29){
+				interestRate=amount*5.25/100; 
+				System.out.println("Interest gained : "+interestRate);}
+			if(d>=30 && d<=45){
+				interestRate=amount*6.00/100; 
+				System.out.println("Interest gained : "+interestRate);}
+			if(d>=45 && d<=60){
+				interestRate=amount*7.50/100; 
+				System.out.println("Interest gained : "+interestRate);}
+			if(d>=61 && d<=184){
+				interestRate=amount*8.00/100; 
+				System.out.println("Interest gained : "+interestRate);}
+			if(d>=185 && d<=365){
+				interestRate=amount*8.50/100; 
+				System.out.println("Interest gained : "+interestRate);}
+		}}
+		if(amount>=10000000){                                                              
+				if(d>=7 && d<=14){
+					interestRate=amount*6.50/100; 
+					System.out.println("Interest gained : "+interestRate);}
+				if(d>=15 && d<=45){
+					interestRate=amount*6.75/100;  
+					System.out.println("Interest gained : "+interestRate);}
+				if(d>=45 && d<=60){
+					interestRate=amount*8.00/100; 
+					System.out.println("Interest gained : "+interestRate);}
+				if(d>=61 && d<=184){
+					interestRate=amount*8.50/100; 
+					System.out.println("Interest gained : "+interestRate);}
+				if(d>=185 && d<=365){
+					interestRate=amount*10.00/100; 
+					System.out.println("Interest gained : "+interestRate);}
+				}
+	}
+}
+
+class RDAccount{
+	public void calculateInterest(){
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the Average amount in your account:");
+		double amount=sc.nextDouble();
+		System.out.println("Enter the Month :");
+		int Month=sc.nextInt();
+		System.out.println("Enter your age :");
+		int age=sc.nextInt();
+		if(amount<0){
+			System.out.println("Invalid amount. Please enter correct values.");
+		}
+		if(age<18){
+			System.out.println("Invalid age. Please enter correct values.");
+		}
+		double interestRate = 0;                                                                        
+		if(amount>=0 && age>=18 && age<60){
+			switch(Month){
+			case 6: 
+				interestRate=amount*7.50/100; System.out.println("Interest gained : "+interestRate);
+			case 9: 
+				interestRate=amount*7.75/100; System.out.println("Interest gained : "+interestRate);
+			case 12:
+				interestRate=amount*8.00/100; System.out.println("Interest gained : "+interestRate);
+			case 15:
+				interestRate=amount*8.25/100; System.out.println("Interest gained : "+interestRate);
+			case 18:
+				interestRate=amount*8.50/100; System.out.println("Interest gained : "+interestRate);
+			case 21:
+				interestRate=amount*8.75/100; System.out.println("Interest gained : "+interestRate);
+			default : System.out.println("Invalid Month. Please enter correct values.");
+			}}                                             
+			if(amount>=0 &&age>=60){
+			switch(Month){
+			case 6: 
+				interestRate=amount*8.00/100; System.out.println("Interest gained : "+interestRate);
+			case 9: 
+				interestRate=amount*8.25/100; System.out.println("Interest gained : "+interestRate);
+			case 12:
+				interestRate=amount*8.50/100; System.out.println("Interest gained : "+interestRate);
+			case 15:
+				interestRate=amount*8.75/100; System.out.println("Interest gained : "+interestRate);
+			case 18:
+				interestRate=amount*9.00/100; System.out.println("Interest gained : "+interestRate);
+			case 21:
+				interestRate=amount*9.25/100; System.out.println("Interest gained : "+interestRate);
+			default : System.out.println("Invalid Month. Please enter correct values.");
+			}
+		}
+	}
+}
+
+public class InterestCalci{
+	public static void main(String[]args){
+		System.out.println("Select the option :");
+		System.out.println("1.Interest Calculator –SB");
+		System.out.println("2.Interest Calculator –FD");
+	    System.out.println("3. Interest Calculator –RD");
+		System.out.println("4. Exit");
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		switch(n)
+		{
+		case 1:
+			SBAccount a = new SBAccount();
+			a.calculateInterest();
+			break;
+		case 2:
+			FDAccount b=new FDAccount();
+			b.calculateInterest(); 
+			break;
+		case 3:
+			RDAccount c=new RDAccount();
+			c.calculateInterest();
+			break;
+		case 4:
+			break;
+		default :
+			System.out.println("Invalid !   Select the correct option");
+		}
+}}
