@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+ http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean class="com.bean.Student" name="std1">
+
+		<property name="id" value="1"></property>
+		<property name="name" value="uday"></property>
+		<property name="phone" value="987654321"></property>
+		<property name="place" ref="place"></property>
+	</bean>
+	
+	<bean class="com.bean.Place" name= "place">
+			<property name="city" value="Delhi"></property>	
+	</bean>
+	
+	<bean class="com.bean.Employee" name="emp1">
+		<property name="id" value="1"/>
+		<property name="name" value="AAA"/>
+		<property name="dept" >
+			<list>
+				<value>Accounts</value>
+				<value>IT</value>
+				<value>BPO</value>
+			</list>
+		</property>
+		
+		<property name="email" >
+			<set>
+				<value>aaa@gmail.com</value>
+				<value>bbb@gmail.com</value>
+				<value>ccc@gmail.com</value>
+			</set>
+		</property>
+		<property name="dictionary">
+			<map>
+				<entry key="1" value ="dept"></entry>
+			</map>
+		</property>
+		
+		<property name="place" ref="place"></property>
+	</bean>
+
+
+</beans>
